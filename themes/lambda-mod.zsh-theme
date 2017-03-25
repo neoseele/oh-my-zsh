@@ -16,7 +16,8 @@ function check_git_prompt_info() {
 %{$fg_bold[cyan]%}→ "
         fi
     else
-        echo "%{$fg_bold[cyan]%}→ "
+        echo "
+%{$fg_bold[cyan]%}→ "
     fi
 }
 
@@ -35,7 +36,8 @@ ${LAMBDA}\
  $(check_git_prompt_info)\
 %{$reset_color%}'
 
-RPROMPT='$(get_right_prompt)'
+#RPROMPT='$(get_right_prompt)'
+RPROMPT='$(battery_pct_prompt)'
 
 # Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX="at %{$fg[blue]%} "
