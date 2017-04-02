@@ -32,17 +32,18 @@ function get_right_prompt() {
 PROMPT='
 ${LAMBDA}\
  %{$fg_bold[$USERCOLOR]%}%n\
- %{$fg_no_bold[magenta]%}[%~]\
+ %{$fg_bold[cyan]%}%~\
  $(check_git_prompt_info)\
 %{$reset_color%}'
 
 #RPROMPT='$(get_right_prompt)'
-RPROMPT='$(battery_pct_prompt)'
+#RPROMPT='[%{$fg_bold[blue]%}%T%{$reset_color%}]'
 
 # Format for git_prompt_info()
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ✗"
+#ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}✗"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}⚡"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} ✔"
 
 # Format for git_prompt_status()
