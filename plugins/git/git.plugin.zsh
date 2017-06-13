@@ -32,6 +32,11 @@ function work_in_progress() {
     echo "WIP!!"
   fi
 }
+# Squash last commit into previous one
+function git-fixup(){
+  git commit --fixup HEAD
+  git rebase --interactive --autosquash HEAD~2
+}
 
 #
 # Aliases
