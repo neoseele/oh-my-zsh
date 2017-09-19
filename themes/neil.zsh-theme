@@ -16,7 +16,12 @@ _rbenv_prompt()
   fi
 }
 
-PROMPT=$'$(_rbenv_prompt)%{$fg_bold[cyan]%}%~ %{$reset_color%}$(git_prompt_info)%D{[%H:%M:%S]}$(battery_pct_prompt)\
+_kube()
+{
+  echo "[`kubectl config current-context | tr '_' '\n' | tail -1`] "
+}
+
+PROMPT=$'$(_kube)%{$fg_bold[cyan]%}%~ %{$reset_color%}$(git_prompt_info)%D{[%H:%M:%S]}$(battery_pct_prompt)\
 %{$fg_bold[green]%}%n${prompt_host}%{$fg_bold[white]%} \x\xCE\xbb%{$reset_color%} '
 
 RPROMPT='%(0?..(%?%))'
