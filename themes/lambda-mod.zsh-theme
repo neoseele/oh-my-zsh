@@ -29,7 +29,14 @@ function get_right_prompt() {
     fi
 }
 
-PROMPT='
+function current_config {
+  gcloud config configurations list | awk '{ if ($2 == "True") print $1 }'
+}
+function current_context {
+  kubectl config current-context 2>/dev/null
+}
+
+PROMPT='[%{$fg[green]%}$(current_context)%{$reset_color%}]
 ${LAMBDA}\
  %{$fg_bold[$USERCOLOR]%}%n\
  %{$fg_bold[cyan]%}%~\
