@@ -21,7 +21,12 @@ _kube()
   echo "[`kubectl config current-context | tr '_' '\n' | tail -1`] "
 }
 
-PROMPT=$'$(_kube)%{$fg_bold[cyan]%}%~ %{$reset_color%}$(git_prompt_info)%D{[%H:%M:%S]}$(battery_pct_prompt)\
+_current_config()
+{
+  echo "[`gcloud config configurations list | awk '{ if ($2 == "True") print $1 }'`]"
+}
+
+PROMPT=$'$(_current_config)$(_kube)%{$fg_bold[cyan]%}%~ %{$reset_color%}$(git_prompt_info)%D{[%H:%M:%S]}$(battery_pct_prompt)\
 %{$fg_bold[green]%}%n${prompt_host}%{$fg_bold[white]%} \x\xCE\xbb%{$reset_color%} '
 
 RPROMPT='%(0?..(%?%))'

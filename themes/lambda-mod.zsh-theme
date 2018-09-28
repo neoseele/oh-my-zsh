@@ -36,7 +36,7 @@ function current_context {
   kubectl config current-context 2>/dev/null
 }
 
-PROMPT='[%{$fg[green]%}$(current_context)%{$reset_color%}]
+PROMPT='[%{$fg[cyan]%}$(current_config)%{$reset_color%} > %{$fg[green]%}$(current_context)%{$reset_color%}]
 ${LAMBDA}\
  %{$fg_bold[$USERCOLOR]%}%n\
  %{$fg_bold[cyan]%}%~\
