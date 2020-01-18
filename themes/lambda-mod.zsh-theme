@@ -17,7 +17,7 @@ function check_git_prompt_info() {
         fi
     else
         echo "
-%{$fg_bold[cyan]%}→ "
+%{$fg_bold[blue]%}→ "
     fi
 }
 
