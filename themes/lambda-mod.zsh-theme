@@ -43,9 +43,9 @@ function current_context {
 #  $(check_git_prompt_info)\
 # %{$reset_color%}'
 
-PROMPT='[%{$fg[green]%}$(current_context)%{$reset_color%}]
+PROMPT='[%{$fg[cyan]%}$(current_context)%{$reset_color%}]
 ${LAMBDA}\
- %{$fg_bold[$USERCOLOR]%}%n\
+ %{$fg_bold[$USERCOLOR]%}%n%{$reset_color%}@%{$fg_bold[green]%}%m:\
  %{$fg_bold[cyan]%}%~\
  $(check_git_prompt_info)\
 %{$reset_color%}'
