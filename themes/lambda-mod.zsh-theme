@@ -30,10 +30,10 @@ function get_right_prompt() {
 }
 
 function current_config {
-  gcloud config configurations list | awk '{ if ($2 == "True") print $1 }'
+#  gcloud config configurations list | awk '{ if ($2 == "True") print $1 }'
 }
 function current_context {
-  kubectl config current-context 2>/dev/null
+#  kubectl config current-context 2>/dev/null
 }
 
 # PROMPT='[%{$fg[cyan]%}$(current_config)%{$reset_color%} > %{$fg[green]%}$(current_context)%{$reset_color%}]
