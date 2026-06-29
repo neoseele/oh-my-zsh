@@ -79,6 +79,8 @@ if [ -f '/usr/local/google/home/nmiu/Downloads/google-cloud-sdk/completion.zsh.i
 source /etc/bash_completion.d/hgd
 # g4d
 source /etc/bash_completion.d/g4d
+# jjd
+source /etc/bash_completion.d/jjd
 # Enables fzf
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
@@ -102,6 +104,17 @@ alias loas_creds.sh='/google/src/head/depot/google3/identity/tools/creds/loas_cr
 alias bluze='/google/bin/releases/blueprint-bluze/public/bluze'
 alias ganpaticfg='/google/bin/releases/ganpaticfg/public/ganpaticfg'
 alias aclcheck='/google/bin/releases/ganpati-acls/tools/aclcheck'
+alias evergreen='/google/bin/releases/deepmind/evergreen/cli/cli.par'
+alias gpaste='/google/src/head/depot/eng/tools/pastebin'
+alias regional_deployments='/google/bin/releases/security-realms/regional_deployments/regional_deployments'
+alias chronicle='/google/data/ro/teams/chronicle/cli/chronicle'
+alias gemini='/google/bin/releases/gemini-cli/tools/gemini'
+alias gemini_sp='GEMINI_SYSTEM_MD=/google/src/head/depot/google3/coresystems/sre/prodai/gemini_cli/superpowers/SYSTEM.md \
+  /google/bin/releases/gemini-cli/tools/gemini'
+alias dea_cli='/google/bin/releases/dea-dev-team/dea_cli'
+alias fig_pending_cl='/google/bin/releases/piper-fig/vcstool/vcstool pending-change-number'
+alias orcas='/google/bin/releases/orcas/public/cli/orcas'
+
 
 # metamappera
 alias mmc_workflows='blaze query //cloud/cre/plx/metamapper_collector:all | grep :workflow | cut -d":" -f2 | sed -e "s|workflow_|/google/data/ro/teams/plx/plxutil rm --hard_delete workflow |" | grep -v diffemall'
@@ -112,6 +125,10 @@ alias mmc_drop_dev_tables='blaze query //cloud/cre/plx/metamapper_collector:all 
 # gcs md
 alias bstp='/google/bin/releases/blobstore2/bstp/bstp'
 alias bstp-qa='/google/bin/releases/blobstore2/bstp-qa/bstp'
+alias impacted='/google/bin/releases/ti-gcp-sre-analysts/tools/impacted'
+alias tiers='/google/bin/releases/ti-gcp-sre-analysts/tools/tiers'
+alias multitool='/google/bin/releases/gcs-sre/multitool/multitool'
+alias centiutil='/google/data/ro/teams/centigrate/centiutil/centiutil'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
