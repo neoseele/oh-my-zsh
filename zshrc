@@ -114,6 +114,9 @@ alias gemini_sp='GEMINI_SYSTEM_MD=/google/src/head/depot/google3/coresystems/sre
 alias dea_cli='/google/bin/releases/dea-dev-team/dea_cli'
 alias fig_pending_cl='/google/bin/releases/piper-fig/vcstool/vcstool pending-change-number'
 alias orcas='/google/bin/releases/orcas/public/cli/orcas'
+alias manual_page.par='/google/bin/releases/alertmanager-team/public/alertmanager_tools/manual_page.par'
+alias cpl='/google/bin/releases/remoteshell-cpl/cpl'
+alias sre-jetski='blaze run //production/prodai/harnesses/jetski/installer/sre_launcher:sre_launcher'
 
 
 # metamappera
@@ -159,4 +162,5 @@ if [ -f "${bigstore_bashrc}" ]; then
 else
   echo "Failed to source ${bigstore_bashrc}"
 fi
+
 
